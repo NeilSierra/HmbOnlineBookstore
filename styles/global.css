@@ -1,0 +1,51 @@
+/*  ==================================================
+    FONT IMPORTS
+    ==================================================  */
+
+/* Font: Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+
+/*  ==================================================
+    GLOBAL STYLES AND VARIABLES
+    ==================================================  */
+
+:root {
+    --primary_red:      #800000;
+    --hover_red:        #B30000;
+    --hover_light_red:  #FFFAFA;
+
+    --danger:           #EC221F;
+    --positive:         #14AE5C;
+    --hover_positive:   #17C568;
+
+    --bg_white:         #FFFFFF;
+    --bg_blue_white:    #F5F6FA;
+    --bg_light_gray:    #D9D9D9;
+
+    --text_dark:        #333333;
+    --text_gray:        #666666;
+    --text_white:       #FFFFFF;
+    --text_black:       #000000;
+
+    --font_heading:     "Inter", sans-serif;
+    --font_primary:     "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-family: var(--font_primary);
+}
+
+body {
+    min-height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+
+    display: flex;
+    flex-direction: column;
+}

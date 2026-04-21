@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HMB Bookstore - Login</title>
+    <title>HMB Bookstore - Change Password</title>
     <link rel="stylesheet" href="/styles/global.css"> <!-- Global styles -->
     <link rel="stylesheet" href="/styles/login.css"> <!-- Login styles -->
 </head>
@@ -20,31 +20,28 @@
         </div>
         <div class="form-side"> <!-- From side -->
             <div class="form-wrapper">
-                <h2>Log In to HMB Bookstore</h2>
+                <a class="go-back" href="login.php">
+                    <!-- Arrow left icon -->
+                     <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.6667 7.99992H3.33337M3.33337 7.99992L8.00004 12.6666M3.33337 7.99992L8.00004 3.33325" style="stroke: currentColor;" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                    </svg>
+                    <span>Go Back</span>
+                </a>
+
+                <h2>Change Password</h2>
                 <p>
-                    Welcome back to HMB bookstore! Enter your username and password to access your account.
+                    Your identity is confirmed. Please set a new, strong password for HMB bookstore — use at least 8 characters, with a mix of letters, numbers, and symbols.
                 </p>
 
                 <form action="" method="post">
-                    <div class="input-group"> <!-- Username -->
-                        <label for="login-username">Username</label>
-                        <div class="input-wrapper">
-                            <!-- User icon -->
-                            <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15 15.75V14.25C15 13.4543 14.6839 12.6913 14.1213 12.1287C13.5587 11.5661 12.7956 11.25 12 11.25H6C5.20435 11.25 4.44129 11.5661 3.87868 12.1287C3.31607 12.6913 3 13.4543 3 14.25V15.75M12 5.25C12 6.90685 10.6569 8.25 9 8.25C7.34315 8.25 6 6.90685 6 5.25C6 3.59315 7.34315 2.25 9 2.25C10.6569 2.25 12 3.59315 12 5.25Z" style="stroke: currentColor;" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                            </svg>
-                            <input type="text" name="login-username" id="login-username" placeholder="Enter your username" required>
-                        </div>
-                    </div>
-
                     <div class="input-group" id="password-input"> <!-- Password -->
-                        <label for="login-password">Password</label>
+                        <label for="reset-password">Password</label>
                         <div class="input-wrapper">
                             <!-- Lock icon -->
                             <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.25 8.25V5.25C5.25 4.25544 5.64509 3.30161 6.34835 2.59835C7.05161 1.89509 8.00544 1.5 9 1.5C9.99456 1.5 10.9484 1.89509 11.6516 2.59835C12.3549 3.30161 12.75 4.25544 12.75 5.25V8.25M3.75 8.25H14.25C15.0784 8.25 15.75 8.92157 15.75 9.75V15C15.75 15.8284 15.0784 16.5 14.25 16.5H3.75C2.92157 16.5 2.25 15.8284 2.25 15V9.75C2.25 8.92157 2.92157 8.25 3.75 8.25Z" style="stroke: currentColor;" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
                             </svg>
-                            <input type="password" name="login-password" id="login-password" placeholder="Enter your password" required>
+                            <input type="password" name="reset-password" id="reset-password" placeholder="Enter your password" required>
                             <button type="button" onclick="toggleShowPassword('password-input')">
                                 <!-- Eye on icon -->
                                 <svg class="eye-on" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,36 +54,35 @@
                                 </svg>
                             </button>
                         </div>
-                        <a href="forgot-password.php" class="forgot-password">Forgot Password?</a>
+                    </div>
+
+                    <div class="input-group" id="confirmPassword-input"> <!-- Confirm password -->
+                        <label for="reset-confirmPassword">Confirm Password</label>
+                        <div class="input-wrapper">
+                            <!-- Lock icon -->
+                            <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.25 8.25V5.25C5.25 4.25544 5.64509 3.30161 6.34835 2.59835C7.05161 1.89509 8.00544 1.5 9 1.5C9.99456 1.5 10.9484 1.89509 11.6516 2.59835C12.3549 3.30161 12.75 4.25544 12.75 5.25V8.25M3.75 8.25H14.25C15.0784 8.25 15.75 8.92157 15.75 9.75V15C15.75 15.8284 15.0784 16.5 14.25 16.5H3.75C2.92157 16.5 2.25 15.8284 2.25 15V9.75C2.25 8.92157 2.92157 8.25 3.75 8.25Z" style="stroke: currentColor;" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                            </svg>
+                            <input type="password" name="reset-confirmPassword" id="reset-confirmPassword" placeholder="Re-enter your password" required    >
+                            <button type="button" onclick="toggleShowPassword('confirmPassword-input')">
+                                <!-- Eye on icon -->
+                                <svg class="eye-on" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.75 9C0.75 9 3.75 3 9 3C14.25 3 17.25 9 17.25 9C17.25 9 14.25 15 9 15C3.75 15 0.75 9 0.75 9Z" style="stroke: currentColor;" stroke-linecap="round" stroke-linejoin="round"  stroke-width="2"/>
+                                    <path d="M9 11.25C10.2426 11.25 11.25 10.2426 11.25 9C11.25 7.75736 10.2426 6.75 9 6.75C7.75736 6.75 6.75 7.75736 6.75 9C6.75 10.2426 7.75736 11.25 9 11.25Z" style="stroke: currentColor;" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                </svg>
+                                <!-- Eye off icon -->
+                                <svg class="eye-off" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.455 13.455C12.1729 14.4323 10.6118 14.9736 9 15C3.75 15 0.75 9 0.75 9C1.68292 7.26142 2.97685 5.74246 4.545 4.545M7.425 3.18C7.94125 3.05916 8.4698 2.99875 9 3C14.25 3 17.25 9 17.25 9C16.7947 9.85171 16.2518 10.6536 15.63 11.3925M10.59 10.59C10.384 10.8111 10.1356 10.9884 9.85961 11.1113C9.58362 11.2343 9.28568 11.3004 8.98357 11.3058C8.68146 11.3111 8.38137 11.2555 8.10121 11.1424C7.82104 11.0292 7.56654 10.8608 7.35288 10.6471C7.13923 10.4335 6.97079 10.179 6.85763 9.89879C6.74447 9.61863 6.68889 9.31854 6.69423 9.01643C6.69956 8.71432 6.76568 8.41638 6.88866 8.14039C7.01163 7.86439 7.18894 7.61599 7.41 7.41M0.75 0.75L17.25 17.25" style="stroke: currentColor;" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                </svg>
+                            </button>
+                        </div>
                     </div>
 
                     <div class="selection-group">
-                        <button class="primary-button" type="submit" name="login-submit">Log In</button>
+                        <button class="primary-button" type="submit" name="resetPassword-submit">Reset Password</button>
                     </div>
                     
                 </form>
-
-                <div class="divider">
-                    <span>or</span>
-                </div>
-
-                <form action="" method="post">
-                    <button class="secondary-button" type="submit" name="google-login">
-                        <!-- Google icon -->
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify" viewBox="0 0 120 119.999999" preserveAspectRatio="xMidYMid meet" version="1.0">
-                            <path fill="#34a753" d="M 53.761719 5.28125 L 66.71875 5.28125 L 74.398438 6.71875 L 83.519531 10.078125 L 90.238281 13.921875 L 95.039062 17.761719 L 96.480469 19.679688 L 81.601562 34.558594 L 79.679688 34.078125 L 74.878906 30.71875 L 69.121094 28.320312 L 64.800781 27.359375 L 55.199219 27.359375 L 49.441406 28.800781 L 42.71875 32.160156 L 37.921875 36 L 33.601562 40.800781 L 29.761719 48.480469 L 27.839844 56.160156 L 27.839844 63.839844 L 29.761719 71.519531 L 33.601562 79.199219 L 38.878906 84.960938 L 42.71875 87.839844 L 49.441406 91.199219 L 55.199219 92.640625 L 65.761719 92.640625 L 72.960938 90.71875 L 79.199219 87.359375 L 84 83.039062 L 87.359375 77.761719 L 89.761719 71.039062 L 60 71.039062 L 60 49.921875 L 111.359375 49.921875 L 112.320312 52.800781 L 112.800781 57.601562 L 112.800781 64.800781 L 111.839844 72.960938 L 109.441406 82.078125 L 105.121094 91.199219 L 101.28125 96.480469 L 96.960938 101.28125 L 91.199219 106.078125 L 84.480469 109.921875 L 76.800781 112.800781 L 70.558594 114.238281 L 66.71875 114.71875 L 53.761719 114.71875 L 44.160156 112.800781 L 36.960938 109.921875 L 29.761719 106.078125 L 23.039062 100.800781 L 18.238281 96 L 13.441406 89.28125 L 10.558594 84.480469 L 7.199219 75.839844 L 5.28125 66.238281 L 5.28125 53.761719 L 7.199219 44.160156 L 10.078125 36.960938 L 13.921875 29.761719 L 17.761719 24.960938 L 22.078125 20.160156 L 26.398438 16.320312 L 33.121094 12 L 41.28125 8.160156 L 50.398438 5.761719 Z M 53.761719 5.28125 " fill-opacity="1" fill-rule="nonzero"/>
-                            <path fill="#ea4334" d="M 53.761719 5.28125 L 66.71875 5.28125 L 74.398438 6.71875 L 83.519531 10.078125 L 90.238281 13.921875 L 95.039062 17.761719 L 96.480469 19.679688 L 81.601562 34.558594 L 79.679688 34.078125 L 74.878906 30.71875 L 69.121094 28.320312 L 64.800781 27.359375 L 55.199219 27.359375 L 49.441406 28.800781 L 42.71875 32.160156 L 37.921875 36 L 33.601562 40.800781 L 29.761719 48.480469 L 27.839844 56.160156 L 27.839844 63.839844 L 28.800781 68.640625 L 28.800781 71.039062 L 20.160156 77.761719 L 11.519531 84.480469 L 10.558594 84.480469 L 7.199219 75.839844 L 5.28125 66.238281 L 5.28125 53.761719 L 7.199219 44.160156 L 10.078125 36.960938 L 13.921875 29.761719 L 17.761719 24.960938 L 22.078125 20.160156 L 26.398438 16.320312 L 33.121094 12 L 41.28125 8.160156 L 50.398438 5.761719 Z M 53.761719 5.28125 " fill-opacity="1" fill-rule="nonzero"/>
-                            <path fill="#4185f3" d="M 60 49.921875 L 111.359375 49.921875 L 112.320312 52.800781 L 112.800781 57.601562 L 112.800781 64.800781 L 111.839844 72.960938 L 109.441406 82.078125 L 105.121094 91.199219 L 101.28125 96.480469 L 96.960938 101.28125 L 95.519531 101.28125 L 88.800781 96 L 80.160156 89.28125 L 78.71875 87.839844 L 84 83.039062 L 87.359375 77.761719 L 89.761719 71.039062 L 60 71.039062 Z M 60 49.921875 " fill-opacity="1" fill-rule="nonzero"/>
-                            <path fill="#fabb05" d="M 11.039062 35.519531 L 15.359375 38.398438 L 21.121094 43.199219 L 26.878906 47.519531 L 28.800781 48.960938 L 28.320312 53.28125 L 27.839844 56.160156 L 27.839844 63.839844 L 28.800781 68.640625 L 28.800781 71.039062 L 20.160156 77.761719 L 11.519531 84.480469 L 10.558594 84.480469 L 7.199219 75.839844 L 5.28125 66.238281 L 5.28125 53.761719 L 7.199219 44.160156 L 10.078125 36.960938 Z M 11.039062 35.519531 " fill-opacity="1" fill-rule="nonzero"/>
-                        </svg>
-                        <span>Continue with Google</span>
-                    </button>
-                </form>
-
-                <div class="footer-text">
-                    <span>Don't have an account?</span>
-                    <a href="signup.php">Sign Up</a>
-                </div>
             </div>
         </div>
     </section>

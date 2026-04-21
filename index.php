@@ -10,10 +10,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HMB Online Bookstore</title>
+    <title>HMB Bookstore</title>
 </head>
 <body>
-    <!-- Label for debugging only -->
-    Index Page
 </body>
 </html>
