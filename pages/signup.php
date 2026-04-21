@@ -1,5 +1,7 @@
 <?php
     session_start();
+
+    require_once __DIR__ . "/../scripts/config.php";
 ?>
 
 <!DOCTYPE html>

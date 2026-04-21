@@ -1,7 +1,6 @@
 <?php 
     session_start();
 
-    // To login page
     header("Location: pages/login.php");
 ?>
 
