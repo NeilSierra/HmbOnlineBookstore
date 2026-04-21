@@ -28,23 +28,23 @@
                     <span>Go Back</span>
                 </a>
 
-                <h2>Forgot Password?</h2>
+                <h2>Verify Your Device</h2>
                 <p>
-                    An OTP has been sent to your email/phone. Use it to verify your identity and reset your password for HMB bookstore.
+                    We've sent a one-time password (OTP) to your registered email/phone. Enter it below to verify this device and log in securely.
                 </p>
 
                 <form action="" method="post">
                     <div class="otp-container">
-                        <input type="text" class="otp-input" maxlength="1" name="passwordOtp-1">
-                        <input type="text" class="otp-input" maxlength="1" name="passwordOtp-2">
-                        <input type="text" class="otp-input" maxlength="1" name="passwordOtp-3">
-                        <input type="text" class="otp-input" maxlength="1" name="passwordOtp-4">
-                        <input type="text" class="otp-input" maxlength="1" name="passwordOtp-5">
-                        <input type="text" class="otp-input" maxlength="1" name="passwordOtp-6">
+                        <input type="text" class="otp-input" maxlength="1" name="deviceOtp-1">
+                        <input type="text" class="otp-input" maxlength="1" name="deviceOtp-2">
+                        <input type="text" class="otp-input" maxlength="1" name="deviceOtp-3">
+                        <input type="text" class="otp-input" maxlength="1" name="deviceOtp-4">
+                        <input type="text" class="otp-input" maxlength="1" name="deviceOtp-5">
+                        <input type="text" class="otp-input" maxlength="1" name="deviceOtp-6">
                     </div>
 
                     <div class="selection-group">
-                        <button class="primary-button" type="submit" name="passwordOtp-submit">Reset Password</button>
+                        <button class="primary-button" type="submit" name="deviceOtp-submit">Reset Password</button>
                     </div>
                     
                 </form>

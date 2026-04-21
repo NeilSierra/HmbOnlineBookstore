@@ -35,13 +35,13 @@
 
                 <form action="" method="post">
                     <div class="input-group" id="password-input"> <!-- Password -->
-                        <label for="reset-password">Password</label>
+                        <label for="resetPassword-password">Password</label>
                         <div class="input-wrapper">
                             <!-- Lock icon -->
                             <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.25 8.25V5.25C5.25 4.25544 5.64509 3.30161 6.34835 2.59835C7.05161 1.89509 8.00544 1.5 9 1.5C9.99456 1.5 10.9484 1.89509 11.6516 2.59835C12.3549 3.30161 12.75 4.25544 12.75 5.25V8.25M3.75 8.25H14.25C15.0784 8.25 15.75 8.92157 15.75 9.75V15C15.75 15.8284 15.0784 16.5 14.25 16.5H3.75C2.92157 16.5 2.25 15.8284 2.25 15V9.75C2.25 8.92157 2.92157 8.25 3.75 8.25Z" style="stroke: currentColor;" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
                             </svg>
-                            <input type="password" name="reset-password" id="reset-password" placeholder="Enter your password" required>
+                            <input type="password" name="resetPassword-password" id="resetPassword-password" placeholder="Enter your password" required>
                             <button type="button" onclick="toggleShowPassword('password-input')">
                                 <!-- Eye on icon -->
                                 <svg class="eye-on" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,13 +57,13 @@
                     </div>
 
                     <div class="input-group" id="confirmPassword-input"> <!-- Confirm password -->
-                        <label for="reset-confirmPassword">Confirm Password</label>
+                        <label for="resetPassword-confirmPassword">Confirm Password</label>
                         <div class="input-wrapper">
                             <!-- Lock icon -->
                             <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.25 8.25V5.25C5.25 4.25544 5.64509 3.30161 6.34835 2.59835C7.05161 1.89509 8.00544 1.5 9 1.5C9.99456 1.5 10.9484 1.89509 11.6516 2.59835C12.3549 3.30161 12.75 4.25544 12.75 5.25V8.25M3.75 8.25H14.25C15.0784 8.25 15.75 8.92157 15.75 9.75V15C15.75 15.8284 15.0784 16.5 14.25 16.5H3.75C2.92157 16.5 2.25 15.8284 2.25 15V9.75C2.25 8.92157 2.92157 8.25 3.75 8.25Z" style="stroke: currentColor;" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
                             </svg>
-                            <input type="password" name="reset-confirmPassword" id="reset-confirmPassword" placeholder="Re-enter your password" required    >
+                            <input type="password" name="resetPassword-confirmPassword" id="resetPassword-confirmPassword" placeholder="Re-enter your password" required    >
                             <button type="button" onclick="toggleShowPassword('confirmPassword-input')">
                                 <!-- Eye on icon -->
                                 <svg class="eye-on" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
